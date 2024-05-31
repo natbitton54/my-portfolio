@@ -763,11 +763,16 @@ section {
     transition: transform .4s;
     border-radius: 15px;
     cursor: default;
+    height: 500px;
+    position: relative;
 }
 
 .portfolio-btn {
     width: auto;
     justify-content: center;
+    position: absolute;
+    bottom: 25px;
+    left: 162px;
 }
 
 .portfolio-box:hover {
@@ -1552,6 +1557,14 @@ footer .footer-link {
         padding: 1rem;
     }
 
+    .portfolio-btn {
+        width: auto;
+        justify-content: center;
+        position: absolute;
+        bottom: 25px;
+        left: 162px;
+    }
+
 }
 
 
@@ -1676,6 +1689,14 @@ footer .footer-link {
 
     .contact-form button {
         font-size: 14px;
+    }
+
+    .portfolio-btn {
+        width: auto;
+        justify-content: center;
+        position: absolute;
+        bottom: 25px;
+        left: 55px;
     }
 }
 
@@ -1848,5 +1869,3 @@ footer .footer-link {
         margin: 10px;
     }
 }
-
-@media screen and (max-width: 330px) {}
