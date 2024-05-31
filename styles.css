@@ -1562,7 +1562,7 @@ footer .footer-link {
         justify-content: center;
         position: absolute;
         bottom: 25px;
-        left: 162px;
+        left: 85px;
     }
 
 }
@@ -1696,7 +1696,7 @@ footer .footer-link {
         justify-content: center;
         position: absolute;
         bottom: 25px;
-        left: 55px;
+        left: 85px;
     }
 }
 
@@ -1838,6 +1838,14 @@ footer .footer-link {
     .contact-form button {
         font-size: 12px;
     }
+
+    .portfolio-btn {
+        width: auto;
+        justify-content: center;
+        position: absolute;
+        bottom: 25px;
+        left: 85px;
+    }
 }
 
 @media screen and (max-width: 340px) {
@@ -1867,5 +1875,13 @@ footer .footer-link {
 
     .about .btn-box .btn {
         margin: 10px;
+    }
+
+    .portfolio-btn {
+        width: auto;
+        justify-content: center;
+        position: absolute;
+        bottom: 25px;
+        left: 85px;
     }
 }
