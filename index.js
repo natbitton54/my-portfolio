@@ -192,22 +192,38 @@ const scrollTop = document.querySelectorAll(".scroll-top");
 scrollTop.forEach((element) => observer.observe(element));
 
 
-// redirect the user to index.html after form submission
-function submitForm(event) {
+document.getElementById('myForm').addEventListener('submit', function (event) {
   event.preventDefault();
+
   const form = event.target;
-  fetch(form.action, {
-    method: form.method,
-    body: new FormData(form),
+  const formData = new FormData(form);
+
+  // Append a custom subject line including the submitter's name
+  formData.append('_subject', 'New Submission from ' + formData.get('name'));
+
+  // Optionally set the Reply-To header
+  formData.append('_replyto', formData.get('email'));
+
+  fetch('https://formspree.io/f/xdoqrkol', {
+    method: 'POST',
+    body: formData,
     headers: {
       'Accept': 'application/json'
     }
-  }).then(response => {
-    if (response.ok) {
-      alert("Thanks for your submission!");
-      form.reset(); // Reset the form
-    }
-  }).catch(error => {
-    alert("Oops! There was a problem submitting your form")
-  });
-}
+  })
+    .then(response => {
+      if (response.ok) {
+        alert('Thank you for your submission!');
+        form.reset();
+      } else {
+        response.json().then(data => {
+          if (data.errors) {
+            alert(data.errors.map(error => error.message).join(", "));
+          } else {
+            alert('Oops! Something went wrong!');
+          }
+        });
+      }
+    })
+    .catch(error => alert('There was a problem submitting your form: ' + error.message));
+});

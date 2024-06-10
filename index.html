@@ -342,8 +342,10 @@
                     <i class='bx bx-cart-add portfolio-icon'></i>
                     <h3>QuickCart</h3>
                     <p class="project-description">
-                        QuickCart is a dynamic online shopping platform developed using HTML, CSS, JavaScript, JSON, AJAX and Local/ Session Storage. It aims to offer a
-                        seamless shopping experience with intuitive navigation and efficient performance, showcasing modern web design and
+                        QuickCart is a dynamic online shopping platform developed using HTML, CSS, JavaScript, JSON,
+                        AJAX and Local/ Session Storage. It aims to offer a
+                        seamless shopping experience with intuitive navigation and efficient performance, showcasing
+                        modern web design and
                         e-commerce functionality.
                     </p>
                     <div class="btn-box portfolio-btn">
@@ -434,15 +436,16 @@
             </p>
         </div>
 
-        <form action="https://formspree.io/f/xdoqrkol" method="POST" class="scroll-bottom" onsubmit="submitForm(event)">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="text" name="phone" placeholder="Phone Number" required>
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Message" required></textarea>
+        <form id="myForm" class="scroll-bottom">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <input type="hidden" name="_subject" value="QuickCart">
             <div class="btn-box formBtn">
                 <button type="submit" class="btn">Submit</button>
             </div>
         </form>
+
     </section>
 
     <!-- footer  -->
